@@ -1,0 +1,10 @@
+# This repo is PUBLIC and publish.sh runs `git add -A`.
+# Never let credentials or call-placing scripts get swept in.
+*.py
+*.env
+.env
+.env.*
+secrets*
+*credentials*
+*token*
+twilio*.json
