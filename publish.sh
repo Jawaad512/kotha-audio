@@ -103,7 +103,6 @@ tmp="$(mktemp)"
     printf '| `%s` | %s/%s | `%s` |\n' "$f" "$base" "$f" "$(content_type "$f")"
   done
   echo
-  echo "_Last regenerated: $(date -u '+%Y-%m-%d %H:%M UTC')_"
   echo "<!-- URLS:END -->"
 } > "$tmp"
 

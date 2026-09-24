@@ -18,7 +18,6 @@ Regenerated automatically by `publish.sh` — don't edit this table by hand.
 | `TTStest.mp3` | https://jawaad512.github.io/kotha-audio/TTStest.mp3 | `audio/mp3` |
 | `play.xml` | https://jawaad512.github.io/kotha-audio/play.xml | `application/xml` |
 
-_Last regenerated: 2026-09-24 07:25 UTC_
 <!-- URLS:END -->
 
 ## Using it from Twilio
