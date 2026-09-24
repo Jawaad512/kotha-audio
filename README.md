@@ -6,6 +6,22 @@ Twilio's trial tier won't accept inline TwiML, so TwiML documents are hosted her
 as static files alongside the audio clips they reference. Everything committed to
 the root of `main` is served over HTTPS by GitHub Pages within about a minute.
 
+## Important: play.xml cannot be a Twilio webhook
+
+GitHub Pages is a static host - it answers only GET and HEAD, and returns
+405 Method Not Allowed for POST. Twilio fetches webhook URLs with POST by
+default, and on a **trial account** the `method` parameter is rejected
+(HTTP 400, "trial accounts have limited parameter access"), so GET cannot
+be forced.
+
+Net effect: **host the TwiML somewhere that accepts POST** (a TwiML Bin is
+free and Twilio-hosted), and keep pointing its `<Play>` at the audio URLs
+below. Audio is always fetched with GET, so this repo remains the right
+home for the mp3s.
+
+`play.xml` is kept here as the canonical copy of the markup - paste it into
+the TwiML Bin.
+
 ## Live URLs
 
 Regenerated automatically by `publish.sh` — don't edit this table by hand.
